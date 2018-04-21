@@ -2,12 +2,8 @@ package com.abt.java.pattern;
 
 public class Pattern {
 
-    public static void PrintData(Box<?> data) {
-        System.out.println("Second Way :" + data.getData());
-    }
-
     public static void main(String[] args) {
-//第一种方式：无参构造传递数据
+        //第一种方式：无参构造传递数据
         Box<String> Str = new Box<String>();
         Str.setData("sun");
         System.out.println("First Way :" + Str.getData());
@@ -20,15 +16,18 @@ public class Pattern {
         Num.setData(777777777);
         System.out.println("First Way :" + Num.getData()+"\n");
 
-//第二种方式：有参构造传递数据
+        //第二种方式：有参构造传递数据
         Box<String> name = new Box<String>("corn");//new的动作-->执行：this.data = data;
         Box<Integer> age = new Box<Integer>(712);
         Box<Number> number = new Box<Number>(314);
 
-//1.invoked
         PrintData(name);
         PrintData(age);
         PrintData(number);
-
     }
+
+    public static void PrintData(Box<?> data) {
+        System.out.println("Second Way :" + data.getData());
+    }
+
 }

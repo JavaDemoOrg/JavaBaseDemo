@@ -1,4 +1,4 @@
-package com.abt.patterndemo;
+package com.abt.demo;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.abt.patterndemo;
+package com.abt.demo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

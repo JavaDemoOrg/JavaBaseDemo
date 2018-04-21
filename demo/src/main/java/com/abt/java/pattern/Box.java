@@ -12,7 +12,7 @@ public class Box<T> {
 
     }
 
-    public T setData(T data){
+    public T setData(T data) {
         this.data = data;
         return this.data;
     }
@@ -23,7 +23,7 @@ public class Box<T> {
     }
 
     public T getData() {
-
         return data;//直接返回数据
     }
+
 }
