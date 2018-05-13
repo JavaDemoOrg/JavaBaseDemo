@@ -19,23 +19,26 @@ public class DoLock {
     }
 
     static class SellTicket implements Runnable {
-        private int ticket = 99;
+        private int ticket = 100;
         private Lock lock = new ReentrantLock();
         public void run() {
             while (true) {
                 lock.lock();
-                if (ticket > 70) {
+                if (ticket > 10) { // 剩下10张不卖
                     try {
-                        Thread.sleep(200);
+                        Thread.sleep(300); // 模拟售票
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     System.out.println(Thread.currentThread().getName()
-                            + " 正在出售第" + (ticket--) + "张票");
-                } else {
-                    ticket = 99;
+                            + " 正在出售第" + (--ticket) + "张票");
+                    lock.unlock();
+                    try {
+                        Thread.sleep((long) (Math.random() * 5000)); // 模拟售票间隙
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
-                lock.unlock();
             }
         }
     }
