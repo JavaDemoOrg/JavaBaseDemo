@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * Created by huangweiqi on 13/05/2018.
  */
-public class DoCached {
+public class DoReadWriteCached {
 
     public static void main(String[] args) {
         final Cached ca = new Cached();
