@@ -24,7 +24,7 @@ public class DoLock {
         public void run() {
             while (true) {
                 lock.lock();
-                if (ticket > 50) {
+                if (ticket > 70) {
                     try {
                         Thread.sleep(200);
                     } catch (InterruptedException e) {
