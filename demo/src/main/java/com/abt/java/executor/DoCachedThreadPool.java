@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
  * 用于执行一些生存期很短的异步型任务。不适用于IO等长延时操作，因为这可能会创建大量线程，导致系统崩溃。
  * 使用SynchronousQueue作为阻塞队列，如果有新任务进入队列，必须队列中数据被其他线程处理，否则会等待。
  */
-public class CachedThreadPoolDemo {
+public class DoCachedThreadPool {
     public static void main(String[] args) {
         ExecutorService pool = Executors.newCachedThreadPool();
         for(int i = 0 ; i < 50 ; i++){
