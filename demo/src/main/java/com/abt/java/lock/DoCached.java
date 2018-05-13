@@ -12,7 +12,7 @@ public class DoCached {
 
     public static void main(String[] args) {
         final Cached ca = new Cached();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -38,13 +38,13 @@ public class DoCached {
                     rwLock.writeLock().lock();
                     try {
                         if (cacheMap.get(key) == null) { // 这里也是
-                            value = "sampleValue";
+                            value = "(value is "+Thread.currentThread().getName()+")";
                             cacheMap.put(key, value);
                             System.out.println(Thread.currentThread().getName() + " put the value ::: " + value);
                         }
                     } finally {
                         rwLock.readLock().lock();       // 将锁降级，这里跟下一句的顺序不能反。
-                        rwLock.writeLock().unlock();    // 关于这里的顺序问题，下面我会提到。
+                        rwLock.writeLock().unlock();    // 关于这里的顺序问题，请查阅post中的说明。
                     }
                 }
             } finally {
