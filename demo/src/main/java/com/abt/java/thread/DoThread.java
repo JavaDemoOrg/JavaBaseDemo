@@ -80,7 +80,7 @@ public class DoThread {
             Car car = CarFactory.makeNewCar();
             car.carName = "car::"+(++carNo);
             carList.add(car);// 加到仓库中去
-            // carNums++;// 总数增加1
+            carNums++;// 总数增加1
             return car;
         }
 
