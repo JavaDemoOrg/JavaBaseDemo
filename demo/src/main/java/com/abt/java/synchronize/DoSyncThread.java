@@ -9,13 +9,13 @@ public class DoSyncThread {
 
     public static void main(String[] args) {
         SyncThread syncThread = new SyncThread();
-        Thread thread1 = new Thread(syncThread, "SyncThread-1");
-        Thread thread2 = new Thread(syncThread, "SyncThread-2");
+        Thread thread1 = new Thread(syncThread, "SyncMethod-1");
+        Thread thread2 = new Thread(syncThread, "SyncMethod-2");
         thread1.start();
         thread2.start();
 
-        /*Thread thread1 = new Thread(new SyncThread(), "SyncThread-1");
-        Thread thread2 = new Thread(new SyncThread(), "SyncThread-2");
+        /*Thread thread1 = new Thread(new SyncMethod(), "SyncMethod-1");
+        Thread thread2 = new Thread(new SyncMethod(), "SyncMethod-2");
         thread1.start();
         thread2.start();*/
     }
