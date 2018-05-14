@@ -21,6 +21,12 @@ public class DoSyncMethod {
     static class SyncMethod implements Runnable {
         private int count;
 
+        public /*synchronized*/ SyncMethod() {
+            synchronized (this) {
+                System.out.println("synchronized可以修饰内部代码块，但不能修饰构造方法");
+            }
+        }
+
         @Override
         public synchronized void run() {
             for (int i = 0; i < 5; i ++) {
@@ -35,16 +41,17 @@ public class DoSyncMethod {
         }
     }
 
+    /** 非同步方法，调用同步父类方法，可实现同步 */
     static class AutoSync extends SyncMethod {
-
         @Override
         public void run() {
             super.run();
         }
     }
 
-    /*interface AutoSync {
-
-    }*/
+    /** 不能用synchronized修饰接口和接口方法 */
+    interface SyncInterface {
+        void sync();
+    }
 
 }
