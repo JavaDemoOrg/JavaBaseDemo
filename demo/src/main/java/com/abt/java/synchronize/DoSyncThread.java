@@ -13,6 +13,11 @@ public class DoSyncThread {
         Thread thread2 = new Thread(syncThread, "SyncThread-2");
         thread1.start();
         thread2.start();
+
+        /*Thread thread1 = new Thread(new SyncThread(), "SyncThread-1");
+        Thread thread2 = new Thread(new SyncThread(), "SyncThread-2");
+        thread1.start();
+        thread2.start();*/
     }
 
     /**
@@ -31,7 +36,7 @@ public class DoSyncThread {
                     try {
                         String threadName = Thread.currentThread().getName();
                         System.out.println(threadName + ": " + (count++));
-                        Thread.sleep(100); // 特意添加的间隙
+                        Thread.sleep(1); // 特意添加的间隙
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
