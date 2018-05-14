@@ -15,3 +15,8 @@
 零长度的byte数组对象创建起来将比任何对象都经济，   
 查看编译后的字节码：生成零长度的byte[]对象只需3条操作码，   
 而Object lock = new Object()则需要7行操作码。   
+
+### 修饰一个方法
+1、在定义接口方法时不能使用synchronized关键字；   
+2、构造方法不能使用synchronized关键字，但可以使用synchronized代码块来进行同步；
+
