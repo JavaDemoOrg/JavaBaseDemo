@@ -1,0 +1,17 @@
+
+## synchronized 修饰符     
+
+### 修饰一个代码块     
+1、[DoSyncThread]      
+一个线程访问一个对象中的synchronized(this)同步代码块时，      
+其他试图访问该对象的线程将被阻塞。        
+
+2、[DoUnSyncThread]       
+当一个线程访问对象的一个synchronized(this)同步代码块时，        
+另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。        
+
+3、[DoLockObject]     
+指定要给某个对象加锁   
+零长度的byte数组对象创建起来将比任何对象都经济，   
+查看编译后的字节码：生成零长度的byte[]对象只需3条操作码，   
+而Object lock = new Object()则需要7行操作码。   
