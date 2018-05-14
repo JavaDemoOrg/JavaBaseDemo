@@ -36,7 +36,7 @@ public class DoSyncThread {
                     try {
                         String threadName = Thread.currentThread().getName();
                         System.out.println(threadName + ": " + (count++));
-                        Thread.sleep(1); // 特意添加的间隙
+                        Thread.sleep(100); // 特意添加的间隙
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
