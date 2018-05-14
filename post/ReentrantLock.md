@@ -6,6 +6,3 @@
 
 [轻松学习java可重入锁(ReentrantLock)的实现原理](https://blog.csdn.net/yanyan19880509/article/details/52345422)      
 
-[java多线程简单demo](https://blog.csdn.net/u012954390/article/details/51301873)     
-  
-  
