@@ -11,7 +11,9 @@ public class DoInterrupt {
 
     public static void main(String[] args) throws IOException {
         DoInterrupt test = new DoInterrupt();
-        SleepThread thread = test.new SleepThread();
+        //SleepThread thread = test.new SleepThread();
+        //RunningThread thread = test.new RunningThread();
+        InterruptableThread thread = test.new InterruptableThread();
         thread.start();
         try {
             System.out.println("MainThread --> 进入睡眠状态");
@@ -37,4 +39,41 @@ public class DoInterrupt {
         }
     }
 
+    class RunningThread extends Thread {
+        @Override
+        public void run() {
+            int i = 0;
+            while (i < Integer.MAX_VALUE) {
+                System.out.println(++i+" while循环");
+            }
+        }
+    }
+
+    class InterruptableThread extends Thread {
+        @Override
+        public void run() {
+            int i = 0;
+            while (!isInterrupted() && i<Integer.MAX_VALUE) {
+                System.out.println(++i+" while循环");
+            }
+        }
+    }
+
+    /** 通过标志位来中断线程 */
+    class FlagThread extends Thread {
+        private volatile boolean isStop = false;
+        @Override
+        public void run() {
+            int i = 0;
+            while (!isStop) {
+                i++;
+            }
+        }
+
+        public void setStop(boolean stop) {
+            this.isStop = stop;
+        }
+    }
+
 }
+
