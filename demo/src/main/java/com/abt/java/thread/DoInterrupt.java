@@ -3,7 +3,7 @@ package com.abt.java.thread;
 import java.io.IOException;
 
 /**
- * @描述： @
+ * @描述： @DoInterrupt
  * @作者： @黄卫旗
  * @创建时间： @2018/5/15
  */

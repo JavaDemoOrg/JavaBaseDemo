@@ -1,7 +1,7 @@
 package com.abt.java.thread_communication;
 
 /**
- * @描述： @
+ * @描述： @DoExecuteInTurn
  * @作者： @黄卫旗
  * @创建时间： @2018/5/15
  */
