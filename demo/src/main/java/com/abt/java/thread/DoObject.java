@@ -85,7 +85,7 @@ public class DoObject {
                 carList.add(car);// 加到仓库中去
                 carNums++;// 总数增加1
                 System.out.println("生产汽车--> " + car.carName);
-                //lock.notify();// 唤醒等待的线程
+                lock.notify();// 唤醒等待的线程
                 return car;
             }
         }
