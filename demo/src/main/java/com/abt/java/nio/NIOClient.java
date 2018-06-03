@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 /**
@@ -15,14 +14,15 @@ import java.util.Scanner;
  */
 public class NIOClient {
 
-    public static void main(String[] args) throws UnknownHostException, IOException {
-        Socket s = new Socket("localhost", 8888);
-        InputStream inStream = s.getInputStream();
-        OutputStream outStream = s.getOutputStream();
-        PrintWriter out = new PrintWriter(outStream, true); // 输出
+    public static void main(String[] args) throws IOException {
+        Socket socket = new Socket("localhost", 8888);
+        OutputStream outStream = socket.getOutputStream();
+        PrintWriter out = new PrintWriter(outStream, true);
         out.println("客户端请求PublicKey！！");
-        out.flush();
-        s.shutdownOutput();// 输出结束
+        out.flush(); // 输出
+        socket.shutdownOutput();// 输出结束
+
+        InputStream inStream = socket.getInputStream();
         Scanner in = new Scanner(inStream); // 输入
         StringBuilder sb = new StringBuilder();
         while (in.hasNextLine()) {

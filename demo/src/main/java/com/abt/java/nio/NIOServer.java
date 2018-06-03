@@ -16,6 +16,7 @@ import java.util.Iterator;
  * @创建时间： @24/05/2018
  */
 public class NIOServer {
+
     // 本地字符集
     private static final String LocalCharSetName = "UTF-8";
     // 本地服务器监听的端口
