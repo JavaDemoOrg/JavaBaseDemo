@@ -28,3 +28,4 @@
 2、[面试中关于HashMap的时间复杂度O(1)的思考](https://blog.csdn.net/donggua3694857/article/details/64127131)      
 3、[Java7源码浅析——对HashMap的理解](https://blog.csdn.net/donggua3694857/article/details/52432906)    
 4、[java中hashmap容器实现查找O(1)时间复杂度的思考](https://blog.csdn.net/u014633283/article/details/48549155)   
+5、[JDK源码中HashMap的hash方法原理是什么？](https://www.zhihu.com/question/20733617)      
