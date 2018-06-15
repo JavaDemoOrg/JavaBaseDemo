@@ -25,3 +25,4 @@
 
 ## 参考文献    
 1、[hashmap时间复杂度](https://www.cnblogs.com/BBchao/p/7878699.html)     
+2、[面试中关于HashMap的时间复杂度O(1)的思考](https://blog.csdn.net/donggua3694857/article/details/64127131)      
