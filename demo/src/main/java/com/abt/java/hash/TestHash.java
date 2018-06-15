@@ -1,5 +1,7 @@
 package com.abt.java.hash;
 
+import java.util.HashMap;
+
 /**
  * @描述： @TestHash
  * @作者： @黄卫旗
@@ -36,6 +38,11 @@ public class TestHash {
             hash = h;
         }
         return h;
+    }
+
+    private void testHashMap() {
+        HashMap map = new HashMap();
+        map.hashCode();
     }
 
 }
