@@ -9,15 +9,20 @@ import android.util.SparseArray;
  */
 public class TestSparseArray {
 
+    private static int MAX = 100000;
+
     public static void main(String[] args) {
-        SparseArray<String> sparse = new SparseArray<>();
+        SparseArray sparse = new SparseArray(MAX);
+        //SparseIntArray sparse = new SparseIntArray(MAX);
         long start_sparse = System.currentTimeMillis();
-        for(int i=0;i<Integer.MAX_VALUE;i++){
-            sparse.put(i, String.valueOf(i));
+        for(int i=0;i<MAX;i++){
+            //sparse.put(i, String.valueOf(i));
+            sparse.put(i, i);
         }
         long sparse_memory = Runtime.getRuntime().totalMemory();
         long end_sparse = System.currentTimeMillis()-start_sparse;
-        System.out.println("<---Sparse的插入时间--->"+end_sparse+"<---Sparse占用的内存--->"+sparse_memory);
+        System.out.println("<---Sparse的插入时间--->"+end_sparse+
+                "<---Sparse占用的内存--->"+sparse_memory);
     }
 
 
