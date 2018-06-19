@@ -1,4 +1,4 @@
-package com.abt.java.hash;
+package com.abt.android.hash_map;
 
 import java.util.HashMap;
 
@@ -15,14 +15,12 @@ public class TestHashMap {
         System.out.println("hash: "+hash(hash));
 
         System.out.println("hashCode: "+hash.hashCode());
-        Object obj = hash;
-        System.out.println("obj.hashCode: "+obj.hashCode());
     }
 
     static final int hash(Object key) {
         int h;
         System.out.println("key.hashCode: "+key.hashCode());
-        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+        return (key == null) ? 0 : ((h = key.hashCode()) ^ h >>> 16);
     }
 
 }
