@@ -1,6 +1,7 @@
 package com.abt.android.sparse_array;
 
 import android.util.SparseArray;
+import android.util.SparseIntArray;
 
 import com.abt.android.util.TimeUtil;
 
@@ -13,15 +14,15 @@ public class TestSparseArray {
     //06-19 22:32:41.983 20935-20935/com.abt.android I/System.out: 2018-06-19 22:32:28:500
     //06-19 22:32:41.983 20935-20935/com.abt.android I/System.out: 2018-06-19 22:32:41:989
     //06-19 22:32:41.993 20935-20935/com.abt.android I/System.out: GetTime: 146667
-    private static int MAX = 1000000;
+    private static final int MAX = 1000000;
 
     public static void main(String[] args) {
         //testSparseArray();
         testMemoryTime();
     }
 
-    public static final void testSparseArray() {
-        SparseArray sparseArray = new SparseArray();
+    public static void testSparseArray() {
+        SparseArray<String> sparseArray = new SparseArray<>();
         String startStr = TimeUtil.getFormatStr(System.currentTimeMillis());
         for (int i=0; i<MAX; i++) {
             sparseArray.put(i, "value-"+i);
@@ -32,14 +33,14 @@ public class TestSparseArray {
         System.out.println(endStr);
 
         long start = System.nanoTime();
-        String res = (String) sparseArray.get(999995);
+        String res = sparseArray.get(999995);
         long end = System.nanoTime();
         System.out.println("GetTime: " + (end - start));
         System.out.println("res: "+res);
     }
 
-    public static final void testMemoryTime() {
-        SparseArray sparse = new SparseArray(MAX);
+    private static void testMemoryTime() {
+        SparseIntArray sparse = new SparseIntArray(MAX);
         long startSparse = System.currentTimeMillis();
         for(int i=0;i<MAX;i++){
             sparse.put(i, i);
