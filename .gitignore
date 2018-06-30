@@ -4,3 +4,8 @@
 local.properties
 *.iml
 /build/
+/JavaBaseDemo.iml
+.DS_Store
+sample/src/main/java/com/.DS_Store
+sample/src/main/java/com/abt/.DS_Store
+/local.properties
