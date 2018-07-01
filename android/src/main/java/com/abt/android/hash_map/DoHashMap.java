@@ -5,11 +5,11 @@ import com.abt.android.util.TimeUtil;
 import java.util.HashMap;
 
 /**
- * @描述： @TestHashMap
+ * @描述： @DoHashMap
  * @作者： @黄卫旗
  * @创建时间： @15/06/2018
  */
-public class TestHashMap {
+public class DoHashMap {
     //06-19 22:35:37.593 24740-24740/com.abt.android I/System.out: 2018-06-19 22:35:20:887
     //06-19 22:35:37.593 24740-24740/com.abt.android I/System.out: 2018-06-19 22:35:37:604
     //06-19 22:35:37.643 24740-24740/com.abt.android I/System.out: GetTime: 209531

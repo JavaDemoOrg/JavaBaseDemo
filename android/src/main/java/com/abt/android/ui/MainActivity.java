@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.abt.android.hash_map.TestHashMap;
+import com.abt.android.hash_map.DoHashMap;
 
 /**
  * @描述： @MainActivity
@@ -15,8 +15,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //TestSparseArray.testSparseArray();
-        //TestSparseArray.testMemoryTime();
-        TestHashMap.testHashMap();
+        //DoSparseArray.testSparseArray();
+        //DoSparseArray.testMemoryTime();
+        DoHashMap.testHashMap();
     }
 }

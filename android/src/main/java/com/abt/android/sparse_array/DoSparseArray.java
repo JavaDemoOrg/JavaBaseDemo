@@ -6,11 +6,11 @@ import android.util.SparseIntArray;
 import com.abt.android.util.TimeUtil;
 
 /**
- * @描述： @TestSparseArray
+ * @描述： @DoSparseArray
  * @作者： @黄卫旗
  * @创建时间： @16/06/2018
  */
-public class TestSparseArray {
+public class DoSparseArray {
     //06-19 22:32:41.983 20935-20935/com.abt.android I/System.out: 2018-06-19 22:32:28:500
     //06-19 22:32:41.983 20935-20935/com.abt.android I/System.out: 2018-06-19 22:32:41:989
     //06-19 22:32:41.993 20935-20935/com.abt.android I/System.out: GetTime: 146667
