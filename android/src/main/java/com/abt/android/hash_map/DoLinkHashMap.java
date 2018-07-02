@@ -1,7 +1,5 @@
 package com.abt.android.hash_map;
 
-import android.util.LruCache;
-
 import java.util.LinkedHashMap;
 
 /**
@@ -12,11 +10,15 @@ import java.util.LinkedHashMap;
 public class DoLinkHashMap {
 
     public static void main(String[] args) {
-        LruCache lruCache = new LruCache(16);
-        lruCache.size();
+        //LruCache lruCache = new LruCache(16);
+        //lruCache.size();
 
-        LinkedHashMap linkedHashMap = new LinkedHashMap();
-        linkedHashMap.put("key", "value");
-        linkedHashMap.get("key");
+        LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap();
+        linkedHashMap.put("key-1", 1);
+        linkedHashMap.put("key-2", 2);
+        linkedHashMap.put("key-3", 3);
+        linkedHashMap.put("key-4", 4);
+        linkedHashMap.put("key-5", 5);
+        linkedHashMap.get("key-1");
     }
 }
