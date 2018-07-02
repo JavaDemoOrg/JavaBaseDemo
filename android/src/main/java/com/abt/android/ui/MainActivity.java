@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.abt.android.hash_map.DoHashMap;
-
 /**
  * @描述： @MainActivity
  * @作者： @黄卫旗
@@ -17,6 +15,5 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         //DoSparseArray.testSparseArray();
         //DoSparseArray.testMemoryTime();
-        DoHashMap.testHashMap();
     }
 }
