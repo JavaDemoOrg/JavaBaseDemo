@@ -11,7 +11,7 @@ public class DoReadWriteLock {
 
     public static void main(String[] args) {
         final DefQueue queue = new DefQueue();
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 5; i++) {
             // 启动线程进行读操作
             new Thread(new Runnable() {
                 @Override
