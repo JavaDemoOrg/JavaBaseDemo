@@ -35,3 +35,8 @@ T才能获取写锁进行数据更新。
 
 
 
+##  参考文献
+
+1、[轻松掌握java读写锁(ReentrantReadWriteLock)的实现原理](https://blog.csdn.net/yanyan19880509/article/details/52435135)       
+
+
